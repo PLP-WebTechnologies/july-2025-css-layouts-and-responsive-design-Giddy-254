@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolt-Mtaani Booking Page</title>
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Bolt-Mtaani Ride Booking</h1>
+        <p>Book your ride fast, safe, and conveniently. Below you'll find useful information and a form to schedule your trip.</p>
+    </header>
+
+    <section>
+        <h2>Why Choose Bolt-Mtaani?</h2>
+        <ul>
+            <li>Affordable Rides</li>
+            <li>Professional Drivers</li>
+            <li>Promotions and Discounts</li>
+            <li>Easy Booking Process</li>
+            <li>Safe and Secure Rides</li>
+            <li>Real-time Tracking</li>
+        </ul>
+
+        <h3>How to Book a Ride</h3>
+        <ol>
+            <li>Enter pickup and drop-off location</li>
+            <li>Select ride type</li>
+            <li>Choose payment method</li>
+            <li>Click “Book Ride”</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Ride Options</h2>
+        <p>Compare our most popular ride types.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ride Type</th>
+                    <th>Capacity</th>
+                    <th>Base Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Standard</td>
+                    <td>6 Passengers</td>
+                    <td>1,000 KES</td>
+                </tr>
+                <tr>
+                    <td>Premium</td>
+                    <td>4 Passengers</td>
+                    <td>1,500 KES</td>
+                </tr>
+                <tr>
+                    <td>Luxury</td>
+                    <td>2 Passengers</td>
+                    <td>3,000 KES</td>
+                </tr>
+                <tr>
+                    <td>Boda</td>
+                    <td>1 Passenger</td>
+                    <td>300 KES</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3>See Bolt-Mtaani in Action</h3>
+        <img src="https://images.pexels.com/photos/30463342/pexels-photo-30463342.jpeg" alt="Bolt-Mtaani App Screenshot" width="300" height="300">
+
+        <h3>Bolt-Mtaani Promo Audio</h3>
+        <audio controls>
+            <source src="https://github.com/gkiprutongeno/Uba-Mtaani-Promo-Audio/raw/a88723a36a1c2d03617fb828c64896554e88151e/promo-audio/good_sound_when_driving_for_uber_and_lyft_mp3_32290.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h3>Bolt-Mtaani Promo Video</h3>
+        <video width="320" height="240" controls>
+            <source src="https://videos.pexels.com/video-files/12046193/12046193-uhd_2560_1440_60fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section>
+        <h2>Book Your Ride</h2>
+        <form action="submit_booking.php" method="post">
+            <fieldset>
+                <legend>Trip Details</legend>
+                <label for="pickup">Pickup location:</label><br>
+                <input type="text" id="pickup" name="pickup" placeholder="Enter pickup address" required><br><br>
+
+                <label for="dropoff">Drop-off location:</label><br>
+                <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off address" required><br><br>
+
+                <label for="date">Ride Date:</label><br>
+                <input type="date" id="date" name="date" required><br><br>
+
+                <label for="time">Pickup Time:</label><br>
+                <input type="time" id="time" name="time" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Rider Information</legend>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required minlength="3"><br><br>
+
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="^\+?[0-9]{10,15}$"><br>
+                <small>Format: +254700000000</small><br><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Ride Preferences</legend>
+                <label for="car">Choose Car Type:</label><br>
+                <select id="car" name="car" required>
+                    <option value="">--Select--</option>
+                    <option value="standard">Standard</option>
+                    <option value="premium">Premium</option>
+                    <option value="luxury">Luxury</option>
+                    <option value="boda">Boda</option>
+                </select><br><br>
+
+                <label for="note">Special Instructions:</label><br>
+                <textarea id="note" name="note" rows="3" placeholder="Any additional details..."></textarea>
+            </fieldset>
+
+            <input type="submit" value="Book Ride">
+            <input type="reset" value="Clear Form">
+        </form>
+        <p>By booking, you agree to our terms and conditions.</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Bolt-Mtaani. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
